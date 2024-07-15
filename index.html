@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Définition de l'encodage des caractères -->
+    <meta charset="UTF-8">
+    <!-- Configuration du viewport pour une meilleure adaptation sur les appareils mobiles -->
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Lien vers la bibliothèque three.js, chargée en différé -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/95/three.min.js"></script>
+    <!-- Lien vers le fichier JavaScript principal, chargé en différé -->
+    <script defer src="main.js"></script>
+    <!-- Titre de la page -->
+    <title>Document</title>
+</head>
+<body>
+
+<!-- Interface utilisateur principale -->
+<div class="ui">
+
+    <!-- Arrière-plan de l'interface utilisateur -->
+    <div class="ui__background"></div>
+  
+    <!-- Section de jeu de l'interface utilisateur -->
+    <div class="ui__game"></div>
+  
+    <!-- Section des textes de l'interface utilisateur -->
+    <div class="ui__texts">
+      <h1 class="text text--title">
+        <span>THE</span>
+        <span>CUBE</span>
+      </h1>
+      <div class="text text--note">
+        Double tap to start <!-- Double appuyez pour démarrer -->
+      </div>
+      <div class="text text--timer">
+        0:00 <!-- Chronomètre -->
+      </div>
+      <div class="text text--complete">
+        <span>Complete!</span> <!-- Complété ! -->
+      </div>
+      <div class="text text--best-time">
+        <icon trophy></icon>
+        <span>Best Time!</span> <!-- Meilleur temps ! -->
+      </div>
+    </div>
+  
+    <!-- Section des préférences de l'interface utilisateur -->
+    <div class="ui__prefs">
+      <range name="size" title="Cube Size" list="2,3,4,5"></range> <!-- Taille du cube -->
+      <range name="flip" title="Flip Type" list="Swift&nbsp;,Smooth,Bounce"></range> <!-- Type de flip -->
+      <range name="scramble" title="Scramble Length" list="20,25,30"></range> <!-- Longueur du mélange -->
+      <range name="fov" title="Camera Angle" list="Ortographic,Perspective"></range> <!-- Angle de la caméra -->
+      <range name="theme" title="Color Scheme" list="Cube,Erno,Dust,Camo,Rain"></range> <!-- Thème de couleur -->
+    </div>
+  
+    <!-- Section des paramètres de thème de l'interface utilisateur -->
+    <div class="ui__theme">
+      <range name="hue" title="Hue" color></range> <!-- Teinte -->
+      <range name="saturation" title="Saturation" color></range> <!-- Saturation -->
+      <range name="lightness" title="Lightness" color></range> <!-- Luminosité -->
+    </div>
+  
+    <!-- Section des statistiques de l'interface utilisateur -->
+    <div class="ui__stats">
+      <div class="stats" name="cube-size">
+        <i>Cube:</i><b>3x3x3</b> <!-- Taille du cube -->
+      </div>
+      <div class="stats" name="total-solves">
+        <i>Total solves:</i><b>-</b> <!-- Nombre total de résolutions -->
+      </div>
+      <div class="stats" name="best-time">
+        <i>Best time:</i><b>-</b> <!-- Meilleur temps -->
+      </div>
+      <div class="stats" name="worst-time">
+        <i>Worst time:</i><b>-</b> <!-- Pire temps -->
+      </div>
+      <div class="stats" name="average-5">
+        <i>Average of 5:</i><b>-</b> <!-- Moyenne des 5 -->
+      </div>
+      <div class="stats" name="average-12">
+        <i>Average of 12:</i><b>-</b> <!-- Moyenne des 12 -->
+      </div>
+      <div class="stats" name="average-25">
+        <i>Average of 25:</i><b>-</b> <!-- Moyenne des 25 -->
+      </div>
+    </div>
+  
+    <!-- Section des boutons de l'interface utilisateur -->
+    <div class="ui__buttons">
+      <button class="btn btn--bl btn--stats">
+        <icon trophy></icon> <!-- Bouton des statistiques -->
+      </button>
+      <button class="btn btn--br btn--prefs">
+        <icon settings></icon> <!-- Bouton des préférences -->
+      </button>
+      <button class="btn btn--bl btn--back">
+        <icon back></icon> <!-- Bouton de retour -->
+      </button>
+      <button class="btn btn--br btn--theme">
+        <icon theme></icon> <!-- Bouton de thème -->
+      </button>
+      <button class="btn btn--br btn--reset">
+        <icon reset></icon> <!-- Bouton de réinitialisation -->
+      </button>
+    </div>
+  
+  </div>
+</body>
+</html>
